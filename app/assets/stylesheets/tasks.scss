@@ -12,14 +12,14 @@
 
 .tasks-header,
 .task-header {
-  background-color: #000;
-  color: #fff;
+  background-color: #f4f4f4;
+  color: #76ac26;
   margin: 0;
   padding: 25px;
 }
 
 .tasks-header {
-  font-size: 3em;
+  font-size: 1em;
 }
 
 .tasks-status {
@@ -160,7 +160,7 @@
 .back-button {
   float: right;
   position: absolute;
-  top: 25px;
+  top: 5px;
   right: 125px;
 }
 
@@ -187,7 +187,7 @@
   grid-gap: 10px;
   position: absolute;
   text-align: center;
-  top: 25px;
+  top: 5px;
   right: 65px;
 }
 
@@ -206,6 +206,6 @@
   float: right;
   padding: 10px 15px;
   position: absolute;
-  top: 25px;
+  top: 5px;
   right: 25px;
 }
