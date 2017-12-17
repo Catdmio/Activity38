@@ -14,6 +14,10 @@ class TasksController < ApplicationController
 
   # GET /tasks/new
   def new
+    @taskrelation = Taskrelation.new
+    @taskrelation.task = Task.new
+    taskrelation.save
+    @taskrelation.users = current_user
     @task = current_user.tasks.build
   end
 
