@@ -2,58 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* Et All */
+
+ul {
+  list-style: none;
+}
+
 /* Tasks */
 
-.tasks-container {
-  margin: 40px auto;
-  max-width: 600px;
-  text-align: center;
-}
-
-.tasks-header,
-.task-header {
-  background-color: #f4f4f4;
-  color: #76ac26;
-  margin: 0;
-  padding: 25px;
-}
-
-.tasks-header {
-  font-size: 1em;
-}
-
-.tasks-status {
-  font-size: 2em;
-}
-
-.tasks-completed {
-  margin-top: 50px;
-}
-
-.tasks-list {
-  margin: 0 auto;
-  padding: 0;
-}
-
-.tasks-item {
-  border: thin solid #d3d3d3;
-  display: grid;
-  font-size: 1.5em;
-  grid-template-columns: [col] 70% [col] 30%;
-  margin-top: 10px;
-  padding: 15px;
-  text-align: left;
-}
-
-.task-name {
-  color: inherit;
-  grid-column: col 1;
-  text-decoration: none;
-}
-
-.task-name:hover {
-  color: #76ac26;
-}
 
 .task-time {
   color: #d3d3d3;
@@ -64,7 +20,7 @@
 }
 
 .tasks-buttons {
-  margin-top: 40px;
+  margin-top: 5px;
 }
 
 .task-buttons {

@@ -16,12 +16,8 @@
 */
 
 body {
-  background-color: #fff;
-  color: #333;
   font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0;
+  margin: 0px;
 }
 
 button,
@@ -31,7 +27,17 @@ textarea {
   font-size: 16px;
   line-height: 1.5;
 }
+.card{
+  width: 20rem;
+}
+.container {
+  margin-top: 15px;
+  box-sizing: border-box;
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
 
+}
 .notice-container:not(:empty) {
   background-color: #76ac26;
   color: #fff;

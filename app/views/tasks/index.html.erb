@@ -6,49 +6,55 @@
 
 <%= link_to 'Salir', destroy_user_session_path, method: :delete, class: ['action-button', 'log-out-button'] %>﻿
 
-<div class="tasks-container">
-  <div class="tasks-todo">
-    <h2 class="tasks-status">
-      To-Do's
-    </h2>
+<div class="tasks-buttons">
+  <%= link_to 'Nueva Tarea', new_task_path, class: "action-button" %>
+</div>
 
-    <ul class="tasks-list">
-      <% @tasks.todo.each do |task| %>
-      <% if task.user == current_user %>
-      <li class="tasks-item">
-        <%= render 'task', task: task %>
-        <div class="task-buttons">
-          <%= link_to fa_icon("pencil"), edit_task_path(task), class: 'task-button' %>
-          <%= link_to fa_icon("trash-o"), task, class: 'task-button',
-          method: :delete, data: { confirm: 'Estás seguro?' } %>
-        </div>
-      </li>
-      <% end %>
-      <% end %>
-    </ul>
-  </div>
-
-  <div class="tasks-buttons">
-    <%= link_to 'Nueva Tarea', new_task_path, class: "action-button" %>
-  </div>
-
-  <div class="tasks-completed">
-    <h2 class="tasks-status">
-      Completado
-    </h2>
-
-    <ul class="tasks-list">
-      <% @tasks.completed.each do |task| %>
-      <% if task.user == current_user %>
-      <li class="tasks-item">
-        <%= render 'task', task: task %>
-        <div class="task-buttons">
-          <%= link_to fa_icon("trash-o"), task, class: 'task-button',
-          method: :delete, data: { confirm: 'Estás seguro?' } %>
-        </div>
-      </li>
+<div class="container">
+  <div class="row">
+    <div class="col-10">
+      <h2>Pendientes</h2>
+      <ul>
+        <% @tasks.todo.each do |task| %>
+        <% if task.user == current_user %>
+        <div class="card">
+          <%= link_to image_tag("http://lorempixel.com/318/180/food/"), class: 'card-img-top' %>
+          <li><div class="card-body">
+            <%= render 'task', task: task %>
+            <div class="task-buttons">
+              <%= link_to fa_icon("pencil"), edit_task_path(task), class: 'task-button' %>
+              <%= link_to fa_icon("trash-o"), task, class: 'task-button',
+              method: :delete, data: { confirm: 'Estás seguro?' } %>
+            </div>
+          </div>
+        </li>
+      </div>
       <% end %>
       <% end %>
     </ul>
   </div>
 </div>
+<div class="row">
+  <div class="col-8">
+    <h2>Completado</h2>
+    <ul>
+      <% @tasks.completed.each do |task| %>
+      <% if task.user == current_user %>
+      <div class="card">
+        <%= link_to image_tag("http://lorempixel.com/318/180/food/"), class: 'card-img-top' %>
+        <li> <div class="card-body">
+          <%= render 'task', task: task %>
+          <div class="task-buttons">
+            <%= link_to fa_icon("trash-o"), task, class: 'task-button',
+            method: :delete, data: { confirm: 'Estás seguro?' } %>
+          </div>
+        </div>
+      </li>
+    </div>
+    <% end %>
+    <% end %>
+  </ul>
+</div>
+</div>
+</div>
+
